@@ -72,7 +72,7 @@ def parse_proxies(content):
 def scrape(source):
     response = requests.get(source)
     if response.status_code != 200:
-        print(source)
+        print("[ERROR]" + source)
     scraped_proxies = parse_proxies(response.text)
     proxies.extend(scraped_proxies)
 
