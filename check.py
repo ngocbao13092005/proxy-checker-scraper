@@ -22,7 +22,7 @@ def check_proxy(proxy_line):
                 'http': sys.argv[1] + '://' + proxy_address,
                 'https': sys.argv[1] + '://' + proxy_address,
             }
-            requests.get('https://check-host.net/ip', timeout=5, proxies=request_proxies)
+            requests.get('https://check-host.net/ip', timeout=15, proxies=request_proxies)
             return {
                 'success': True,
                 'address': proxy_address
